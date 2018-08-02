@@ -133,3 +133,6 @@ D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.exe
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.pdb
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormChinh.resources
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyBan.resources
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormHoaDon.resources
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyMon.resources
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThongKe.resources
