@@ -113,3 +113,23 @@ D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.csproj.CoreCompileI
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.csproj.CopyComplete
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.exe
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.pdb
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\QLQuanAn.exe.config
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\QLQuanAn.exe
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\QLQuanAn.pdb
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\BUS.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\DAL.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\MetroFramework.Design.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\MetroFramework.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\MetroFramework.Fonts.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\BUS.pdb
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\DAL.pdb
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.csprojAssemblyReference.cache
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormDangNhap.resources
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.Properties.Resources.resources
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.csproj.GenerateResource.cache
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.csproj.CoreCompileInputs.cache
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.csproj.CopyComplete
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.exe
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.pdb
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormChinh.resources
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyBan.resources

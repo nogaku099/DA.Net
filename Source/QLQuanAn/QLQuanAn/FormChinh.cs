@@ -6,24 +6,25 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
 
 namespace QLQuanAn
 {
-    public partial class Form1 : MetroForm
+    public partial class FormChinh : MetroForm
     {
-        public Form1()
+        public FormChinh()
         {
             InitializeComponent();
         }
 
-        private void metroUserControl1_Load(object sender, EventArgs e)
+        private void FormChinh_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,0 +1,9 @@
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\bin\Debug\BUS.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\bin\Debug\BUS.pdb
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\bin\Debug\DAL.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\bin\Debug\DAL.pdb
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.dll
+D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.pdb
