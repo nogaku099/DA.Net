@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1D57D12-0CA5-4C3F-940B-3F3E78476C0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="COFFEE MANAGER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COFFEE MANAGER.Designer.cs">
+      <DependentUpon>COFFEE MANAGER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KHO_GUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHO_GUI.Designer.cs">
+      <DependentUpon>KHO_GUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAIN.Designer.cs">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NHACUNGCAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NHACUNGCAP.Designer.cs">
+      <DependentUpon>NHACUNGCAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NHAPKHO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NHAPKHO.Designer.cs">
+      <DependentUpon>NHAPKHO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUANLYDANHMUC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYDANHMUC.Designer.cs">
+      <DependentUpon>QUANLYDANHMUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYHOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYHOADON.Designer.cs">
+      <DependentUpon>QUANLYHOADON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNGUYENLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYNGUYENLIEU.Designer.cs">
+      <DependentUpon>QUANLYNGUYENLIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYNHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYNHANVIEN.Designer.cs">
+      <DependentUpon>QUANLYNHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLySanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLySanPham.Designer.cs">
+      <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QUANLYTAIKHOAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLYTAIKHOAN.Designer.cs">
+      <DependentUpon>QUANLYTAIKHOAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SELLECT MENNU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SELLECT MENNU.Designer.cs">
+      <DependentUpon>SELLECT MENNU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TABLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TABLE.Designer.cs">
+      <DependentUpon>TABLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TinhTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TinhTien.Designer.cs">
+      <DependentUpon>TinhTien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="COFFEE MANAGER.resx">
+      <DependentUpon>COFFEE MANAGER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHO_GUI.resx">
+      <DependentUpon>KHO_GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAIN.resx">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NHACUNGCAP.resx">
+      <DependentUpon>NHACUNGCAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NHAPKHO.resx">
+      <DependentUpon>NHAPKHO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QUANLYDANHMUC.resx">
+      <DependentUpon>QUANLYDANHMUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QUANLYHOADON.resx">
+      <DependentUpon>QUANLYHOADON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QUANLYNGUYENLIEU.resx">
+      <DependentUpon>QUANLYNGUYENLIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QUANLYNHANVIEN.resx">
+      <DependentUpon>QUANLYNHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLySanPham.resx">
+      <DependentUpon>QuanLySanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QUANLYTAIKHOAN.resx">
+      <DependentUpon>QUANLYTAIKHOAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SELLECT MENNU.resx">
+      <DependentUpon>SELLECT MENNU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TABLE.resx">
+      <DependentUpon>TABLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TinhTien.resx">
+      <DependentUpon>TinhTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DAL.DAL_BAN.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-20160615-14016-njqw65.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{4ceb9348-2ad7-4acc-b5cb-040ffcbcf07b}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{328d09a4-ac32-4c75-bb57-00694f07f4dc}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Activity Grid 2_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Combo Chart_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hot Chocolate_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Peanuts_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CoNguoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\couple.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\580b57fbd9996e24bc43c0f3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warehouse_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Truck_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrator Male_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dinner-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grid.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
