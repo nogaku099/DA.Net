@@ -103,8 +103,7 @@
             this.txtMatKhau.Location = new System.Drawing.Point(224, 193);
             this.txtMatKhau.MaxLength = 32767;
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.PasswordChar = '\0';
-            this.txtMatKhau.PromptText = "******";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMatKhau.SelectedText = "";
             this.txtMatKhau.SelectionLength = 0;
@@ -113,7 +112,6 @@
             this.txtMatKhau.Size = new System.Drawing.Size(210, 23);
             this.txtMatKhau.TabIndex = 2;
             this.txtMatKhau.UseSelectable = true;
-            this.txtMatKhau.WaterMark = "******";
             this.txtMatKhau.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMatKhau.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);

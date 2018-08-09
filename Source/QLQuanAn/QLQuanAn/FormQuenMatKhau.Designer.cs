@@ -33,12 +33,12 @@
             this.txtMatKhau2LayLai = new MetroFramework.Controls.MetroTextBox();
             this.txtMatKhauMoi = new MetroFramework.Controls.MetroTextBox();
             this.txtMatKhauMoiLapLai = new MetroFramework.Controls.MetroTextBox();
-            this.htmlLabel1 = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.htmlLabel2 = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.htmlLabel3 = new MetroFramework.Drawing.Html.HtmlLabel();
-            this.htmlLabel4 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.btnThayDoi = new MetroFramework.Controls.MetroButton();
             this.btnHuy = new MetroFramework.Controls.MetroButton();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -101,7 +101,7 @@
             this.txtMatKhau2LayLai.Location = new System.Drawing.Point(268, 171);
             this.txtMatKhau2LayLai.MaxLength = 32767;
             this.txtMatKhau2LayLai.Name = "txtMatKhau2LayLai";
-            this.txtMatKhau2LayLai.PasswordChar = '\0';
+            this.txtMatKhau2LayLai.PasswordChar = '*';
             this.txtMatKhau2LayLai.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMatKhau2LayLai.SelectedText = "";
             this.txtMatKhau2LayLai.SelectionLength = 0;
@@ -131,7 +131,7 @@
             this.txtMatKhauMoi.Location = new System.Drawing.Point(268, 213);
             this.txtMatKhauMoi.MaxLength = 32767;
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
-            this.txtMatKhauMoi.PasswordChar = '\0';
+            this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMatKhauMoi.SelectedText = "";
             this.txtMatKhauMoi.SelectionLength = 0;
@@ -161,7 +161,7 @@
             this.txtMatKhauMoiLapLai.Location = new System.Drawing.Point(268, 259);
             this.txtMatKhauMoiLapLai.MaxLength = 32767;
             this.txtMatKhauMoiLapLai.Name = "txtMatKhauMoiLapLai";
-            this.txtMatKhauMoiLapLai.PasswordChar = '\0';
+            this.txtMatKhauMoiLapLai.PasswordChar = '*';
             this.txtMatKhauMoiLapLai.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMatKhauMoiLapLai.SelectedText = "";
             this.txtMatKhauMoiLapLai.SelectionLength = 0;
@@ -173,59 +173,12 @@
             this.txtMatKhauMoiLapLai.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMatKhauMoiLapLai.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // htmlLabel1
-            // 
-            this.htmlLabel1.AutoScroll = true;
-            this.htmlLabel1.AutoScrollMinSize = new System.Drawing.Size(58, 23);
-            this.htmlLabel1.AutoSize = false;
-            this.htmlLabel1.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel1.Location = new System.Drawing.Point(124, 128);
-            this.htmlLabel1.Name = "htmlLabel1";
-            this.htmlLabel1.Size = new System.Drawing.Size(75, 23);
-            this.htmlLabel1.TabIndex = 2;
-            this.htmlLabel1.Text = "Tài khoản";
-            // 
-            // htmlLabel2
-            // 
-            this.htmlLabel2.AutoScroll = true;
-            this.htmlLabel2.AutoScrollMinSize = new System.Drawing.Size(65, 23);
-            this.htmlLabel2.AutoSize = false;
-            this.htmlLabel2.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel2.Location = new System.Drawing.Point(124, 171);
-            this.htmlLabel2.Name = "htmlLabel2";
-            this.htmlLabel2.Size = new System.Drawing.Size(75, 23);
-            this.htmlLabel2.TabIndex = 2;
-            this.htmlLabel2.Text = "Mật khẩu 2";
-            // 
-            // htmlLabel3
-            // 
-            this.htmlLabel3.AutoScroll = true;
-            this.htmlLabel3.AutoScrollMinSize = new System.Drawing.Size(76, 23);
-            this.htmlLabel3.AutoSize = false;
-            this.htmlLabel3.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel3.Location = new System.Drawing.Point(124, 213);
-            this.htmlLabel3.Name = "htmlLabel3";
-            this.htmlLabel3.Size = new System.Drawing.Size(87, 40);
-            this.htmlLabel3.TabIndex = 2;
-            this.htmlLabel3.Text = "Mật khẩu mới";
-            // 
-            // htmlLabel4
-            // 
-            this.htmlLabel4.AutoScroll = true;
-            this.htmlLabel4.AutoScrollMinSize = new System.Drawing.Size(122, 23);
-            this.htmlLabel4.AutoSize = false;
-            this.htmlLabel4.BackColor = System.Drawing.SystemColors.Window;
-            this.htmlLabel4.Location = new System.Drawing.Point(124, 259);
-            this.htmlLabel4.Name = "htmlLabel4";
-            this.htmlLabel4.Size = new System.Drawing.Size(123, 23);
-            this.htmlLabel4.TabIndex = 2;
-            this.htmlLabel4.Text = "Nhập lại mật khẩu mới ";
-            // 
             // btnThayDoi
             // 
+            this.btnThayDoi.FontSize = MetroFramework.MetroButtonSize.Medium;
             this.btnThayDoi.Location = new System.Drawing.Point(248, 340);
             this.btnThayDoi.Name = "btnThayDoi";
-            this.btnThayDoi.Size = new System.Drawing.Size(75, 23);
+            this.btnThayDoi.Size = new System.Drawing.Size(143, 48);
             this.btnThayDoi.TabIndex = 4;
             this.btnThayDoi.Text = "Thay Đổi";
             this.btnThayDoi.UseSelectable = true;
@@ -233,25 +186,66 @@
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(476, 340);
+            this.btnHuy.FontSize = MetroFramework.MetroButtonSize.Medium;
+            this.btnHuy.Location = new System.Drawing.Point(412, 340);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.Size = new System.Drawing.Size(139, 48);
             this.btnHuy.TabIndex = 5;
             this.btnHuy.Text = "Xoá";
             this.btnHuy.UseSelectable = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(103, 128);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(73, 19);
+            this.metroLabel2.TabIndex = 6;
+            this.metroLabel2.Text = "Tài khoản";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(103, 171);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel3.TabIndex = 6;
+            this.metroLabel3.Text = "Mật khẩu 2";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(103, 213);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(101, 19);
+            this.metroLabel4.TabIndex = 6;
+            this.metroLabel4.Text = "Mật khẩu mới";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(103, 259);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(161, 19);
+            this.metroLabel5.TabIndex = 6;
+            this.metroLabel5.Text = "Nhập lại mật khẩu mới";
             // 
             // FormQuenMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnThayDoi);
-            this.Controls.Add(this.htmlLabel4);
-            this.Controls.Add(this.htmlLabel3);
-            this.Controls.Add(this.htmlLabel2);
-            this.Controls.Add(this.htmlLabel1);
             this.Controls.Add(this.txtMatKhauMoiLapLai);
             this.Controls.Add(this.txtMatKhauMoi);
             this.Controls.Add(this.txtMatKhau2LayLai);
@@ -272,11 +266,11 @@
         private MetroFramework.Controls.MetroTextBox txtMatKhau2LayLai;
         private MetroFramework.Controls.MetroTextBox txtMatKhauMoi;
         private MetroFramework.Controls.MetroTextBox txtMatKhauMoiLapLai;
-        private MetroFramework.Drawing.Html.HtmlLabel htmlLabel1;
-        private MetroFramework.Drawing.Html.HtmlLabel htmlLabel2;
-        private MetroFramework.Drawing.Html.HtmlLabel htmlLabel3;
-        private MetroFramework.Drawing.Html.HtmlLabel htmlLabel4;
         private MetroFramework.Controls.MetroButton btnThayDoi;
         private MetroFramework.Controls.MetroButton btnHuy;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }
