@@ -9,12 +9,19 @@ using System.Threading.Tasks;
 using MetroFramework;
 using MetroFramework.Forms;
 using System.Windows.Forms;
-
+using DAL;
+using BUS;
 namespace QLQuanAn
 {
     public partial class FormDangNhap : MetroForm
     {
-        
+        //Khoi tao BUS va DAL
+        #region khoiTao
+        BUS_Ban bus_Ban = new BUS_Ban();
+        BUS_TaiKhoan bus_TaiKhoan = new BUS_TaiKhoan();
+        BUS_NhanVien bus_NhanVien = new BUS_NhanVien();
+        #endregion
+
         public FormDangNhap()
         {
             InitializeComponent();
@@ -30,29 +37,31 @@ namespace QLQuanAn
 
         }
          
-        public int dangNhap(String taiKhoan, String matKhau)
+        public void dangNhap(String taiKhoan, String matKhau)
         {
-           
-
-            //Ko rong
-            if (taiKhoan != "" && taiKhoan != null && matKhau != "" && matKhau != null)
+            //De trong
+            if (taiKhoan == "" || taiKhoan == null || matKhau == "" || matKhau == null)
             {
-
+                MetroMessageBox.Show(Owner, "Tài khoản hoặc mật khẩu không được để trống. \n Vui lòng kiểm tra lại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return 1;
+            else if (bus_TaiKhoan.dangNhap(taiKhoan, matKhau))
+            {
+                String maNhanVienDangNhap = bus_TaiKhoan.layMaNhanVien(taiKhoan);
+                NhanVien nhanVienDangNhap = bus_NhanVien.layNVTheoMaNV(maNhanVienDangNhap);
+     
+                MetroMessageBox.Show(Owner, "Chào "+nhanVienDangNhap.ChucVu+" " + nhanVienDangNhap.TenNhanVien, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                FormChinh form = new FormChinh(nhanVienDangNhap);
+                form.ShowDialog();
+                this.Hide();
+            }
+
         }
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             String taiKhoan = txtTaiKhoan.Text;
             String matKhau = txtMatKhau.Text;
-            if (taiKhoan == "" || taiKhoan == null || matKhau == "" || matKhau == null)
-            {
-                MetroMessageBox.Show(Owner,"Tài khoản hoặc mật khẩu không được để trống. \n Vui lòng kiểm tra lại","Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-
-            }
+            dangNhap(taiKhoan, matKhau);
         }
 
         private void btnXoaDangNhap_Click(object sender, EventArgs e)
@@ -65,8 +74,16 @@ namespace QLQuanAn
         {
             if (e.KeyCode == Keys.Enter)
             {
-
+                String taiKhoan = txtTaiKhoan.Text;
+                String matKhau = txtMatKhau.Text;
+                dangNhap(taiKhoan, matKhau);
             }
+        }
+
+        private void btnQuenMatKhau_Click(object sender, EventArgs e)
+        {
+            FormQuenMatKhau form = new FormQuenMatKhau();
+            form.Show();
         }
     }
 }

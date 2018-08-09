@@ -4,3 +4,10 @@ D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.csprojAssemblyRe
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.dll
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.pdb
+D:\Github\DA.Net\Source\QLQuanAn\DAL\bin\Debug\DAL.dll.config
+D:\Github\DA.Net\Source\QLQuanAn\DAL\bin\Debug\DAL.dll
+D:\Github\DA.Net\Source\QLQuanAn\DAL\bin\Debug\DAL.pdb
+D:\Github\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Github\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Github\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.dll
+D:\Github\DA.Net\Source\QLQuanAn\DAL\obj\Debug\DAL.pdb

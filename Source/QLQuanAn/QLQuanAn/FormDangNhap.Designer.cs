@@ -34,6 +34,7 @@
             this.txtMatKhau = new MetroFramework.Controls.MetroTextBox();
             this.btnDangNhap = new MetroFramework.Controls.MetroButton();
             this.btnXoaDangNhap = new MetroFramework.Controls.MetroButton();
+            this.btnQuenMatKhau = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel2
@@ -137,11 +138,22 @@
             this.btnXoaDangNhap.UseSelectable = true;
             this.btnXoaDangNhap.Click += new System.EventHandler(this.btnXoaDangNhap_Click);
             // 
+            // btnQuenMatKhau
+            // 
+            this.btnQuenMatKhau.Location = new System.Drawing.Point(489, 146);
+            this.btnQuenMatKhau.Name = "btnQuenMatKhau";
+            this.btnQuenMatKhau.Size = new System.Drawing.Size(93, 56);
+            this.btnQuenMatKhau.TabIndex = 5;
+            this.btnQuenMatKhau.Text = "Quên mật khẩu";
+            this.btnQuenMatKhau.UseSelectable = true;
+            this.btnQuenMatKhau.Click += new System.EventHandler(this.btnQuenMatKhau_Click);
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 382);
+            this.Controls.Add(this.btnQuenMatKhau);
             this.Controls.Add(this.btnXoaDangNhap);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
@@ -164,6 +176,7 @@
         private MetroFramework.Controls.MetroTextBox txtMatKhau;
         private MetroFramework.Controls.MetroButton btnDangNhap;
         private MetroFramework.Controls.MetroButton btnXoaDangNhap;
+        private MetroFramework.Controls.MetroButton btnQuenMatKhau;
     }
 }
 

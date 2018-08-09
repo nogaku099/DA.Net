@@ -29,27 +29,107 @@
         private void InitializeComponent()
         {
             this.lblHienThiUser = new MetroFramework.Controls.MetroLabel();
-            this.btnDangXuat = new MetroFramework.Controls.MetroTile();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.metroTile5 = new MetroFramework.Controls.MetroTile();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
-            this.metroTile7 = new MetroFramework.Controls.MetroTile();
+            this.chucNangThongKe = new MetroFramework.Controls.MetroTile();
+            this.chucNangQLNhanvien = new MetroFramework.Controls.MetroTile();
+            this.chucNangQLHoaDon = new MetroFramework.Controls.MetroTile();
+            this.chucNangQLBan = new MetroFramework.Controls.MetroTile();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.chucNangQLMon = new MetroFramework.Controls.MetroTile();
+            this.btnDangXuat = new MetroFramework.Controls.MetroTile();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHienThiUser
             // 
             this.lblHienThiUser.AutoSize = true;
-            this.lblHienThiUser.Location = new System.Drawing.Point(1151, 37);
+            this.lblHienThiUser.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblHienThiUser.Location = new System.Drawing.Point(994, 34);
             this.lblHienThiUser.Name = "lblHienThiUser";
-            this.lblHienThiUser.Size = new System.Drawing.Size(81, 19);
+            this.lblHienThiUser.Size = new System.Drawing.Size(83, 19);
             this.lblHienThiUser.TabIndex = 0;
-            this.lblHienThiUser.Text = "metroLabel1";
+            this.lblHienThiUser.Text = "tenNhanVien";
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.Controls.Add(this.chucNangQLNhanvien);
+            this.metroPanel1.Controls.Add(this.chucNangQLMon);
+            this.metroPanel1.Controls.Add(this.chucNangThongKe);
+            this.metroPanel1.Controls.Add(this.chucNangQLHoaDon);
+            this.metroPanel1.Controls.Add(this.chucNangQLBan);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(4, 14);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(157, 744);
+            this.metroPanel1.TabIndex = 2;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // chucNangThongKe
+            // 
+            this.chucNangThongKe.ActiveControl = null;
+            this.chucNangThongKe.Location = new System.Drawing.Point(3, 353);
+            this.chucNangThongKe.Name = "chucNangThongKe";
+            this.chucNangThongKe.Size = new System.Drawing.Size(151, 78);
+            this.chucNangThongKe.TabIndex = 3;
+            this.chucNangThongKe.Text = "Thống kê";
+            this.chucNangThongKe.UseSelectable = true;
+            // 
+            // chucNangQLNhanvien
+            // 
+            this.chucNangQLNhanvien.ActiveControl = null;
+            this.chucNangQLNhanvien.Location = new System.Drawing.Point(3, 492);
+            this.chucNangQLNhanvien.Name = "chucNangQLNhanvien";
+            this.chucNangQLNhanvien.Size = new System.Drawing.Size(151, 78);
+            this.chucNangQLNhanvien.TabIndex = 3;
+            this.chucNangQLNhanvien.Text = "Quản lý nhân viên";
+            this.chucNangQLNhanvien.UseSelectable = true;
+            // 
+            // chucNangQLHoaDon
+            // 
+            this.chucNangQLHoaDon.ActiveControl = null;
+            this.chucNangQLHoaDon.Location = new System.Drawing.Point(3, 216);
+            this.chucNangQLHoaDon.Name = "chucNangQLHoaDon";
+            this.chucNangQLHoaDon.Size = new System.Drawing.Size(151, 78);
+            this.chucNangQLHoaDon.TabIndex = 3;
+            this.chucNangQLHoaDon.Text = "Quản lý hoá đơn";
+            this.chucNangQLHoaDon.UseSelectable = true;
+            // 
+            // chucNangQLBan
+            // 
+            this.chucNangQLBan.ActiveControl = null;
+            this.chucNangQLBan.Location = new System.Drawing.Point(0, 79);
+            this.chucNangQLBan.Name = "chucNangQLBan";
+            this.chucNangQLBan.Size = new System.Drawing.Size(151, 78);
+            this.chucNangQLBan.TabIndex = 3;
+            this.chucNangQLBan.Text = "Quản lý bàn";
+            this.chucNangQLBan.UseSelectable = true;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(192, 93);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(1151, 662);
+            this.metroPanel2.TabIndex = 3;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // chucNangQLMon
+            // 
+            this.chucNangQLMon.ActiveControl = null;
+            this.chucNangQLMon.Location = new System.Drawing.Point(3, 629);
+            this.chucNangQLMon.Name = "chucNangQLMon";
+            this.chucNangQLMon.Size = new System.Drawing.Size(151, 78);
+            this.chucNangQLMon.TabIndex = 3;
+            this.chucNangQLMon.Text = "Quản lý món";
+            this.chucNangQLMon.UseSelectable = true;
             // 
             // btnDangXuat
             // 
@@ -65,108 +145,6 @@
             this.btnDangXuat.UseSelectable = true;
             this.btnDangXuat.UseTileImage = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.Controls.Add(this.metroTile7);
-            this.metroPanel1.Controls.Add(this.metroTile6);
-            this.metroPanel1.Controls.Add(this.metroTile5);
-            this.metroPanel1.Controls.Add(this.metroTile4);
-            this.metroPanel1.Controls.Add(this.metroTile3);
-            this.metroPanel1.Controls.Add(this.metroTile2);
-            this.metroPanel1.Controls.Add(this.metroTile1);
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(4, 14);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(157, 744);
-            this.metroPanel1.TabIndex = 2;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(3, 3);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(151, 78);
-            this.metroTile1.TabIndex = 3;
-            this.metroTile1.UseSelectable = true;
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(3, 119);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(151, 78);
-            this.metroTile2.TabIndex = 3;
-            this.metroTile2.Text = "metroTile1";
-            this.metroTile2.UseSelectable = true;
-            // 
-            // metroTile3
-            // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(3, 232);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(151, 78);
-            this.metroTile3.TabIndex = 3;
-            this.metroTile3.Text = "metroTile1";
-            this.metroTile3.UseSelectable = true;
-            // 
-            // metroTile4
-            // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(3, 339);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(151, 78);
-            this.metroTile4.TabIndex = 3;
-            this.metroTile4.Text = "metroTile1";
-            this.metroTile4.UseSelectable = true;
-            // 
-            // metroTile5
-            // 
-            this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(3, 454);
-            this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(151, 78);
-            this.metroTile5.TabIndex = 3;
-            this.metroTile5.Text = "metroTile1";
-            this.metroTile5.UseSelectable = true;
-            // 
-            // metroTile6
-            // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(3, 564);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(151, 78);
-            this.metroTile6.TabIndex = 3;
-            this.metroTile6.Text = "metroTile1";
-            this.metroTile6.UseSelectable = true;
-            // 
-            // metroTile7
-            // 
-            this.metroTile7.ActiveControl = null;
-            this.metroTile7.Location = new System.Drawing.Point(3, 663);
-            this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(151, 78);
-            this.metroTile7.TabIndex = 3;
-            this.metroTile7.Text = "metroTile1";
-            this.metroTile7.UseSelectable = true;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(192, 93);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1151, 662);
-            this.metroPanel2.TabIndex = 3;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
             // 
             // FormChinh
             // 
@@ -190,13 +168,11 @@
         private MetroFramework.Controls.MetroLabel lblHienThiUser;
         private MetroFramework.Controls.MetroTile btnDangXuat;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroTile metroTile6;
-        private MetroFramework.Controls.MetroTile metroTile5;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile chucNangThongKe;
+        private MetroFramework.Controls.MetroTile chucNangQLNhanvien;
+        private MetroFramework.Controls.MetroTile chucNangQLHoaDon;
+        private MetroFramework.Controls.MetroTile chucNangQLBan;
         private MetroFramework.Controls.MetroPanel metroPanel2;
+        private MetroFramework.Controls.MetroTile chucNangQLMon;
     }
 }

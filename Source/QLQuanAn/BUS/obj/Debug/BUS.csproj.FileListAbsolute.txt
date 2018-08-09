@@ -7,3 +7,13 @@ D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csproj.CoreCompi
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.dll
 D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.pdb
+D:\Github\DA.Net\Source\QLQuanAn\BUS\bin\Debug\BUS.dll
+D:\Github\DA.Net\Source\QLQuanAn\BUS\bin\Debug\BUS.pdb
+D:\Github\DA.Net\Source\QLQuanAn\BUS\bin\Debug\DAL.dll
+D:\Github\DA.Net\Source\QLQuanAn\BUS\bin\Debug\DAL.pdb
+D:\Github\DA.Net\Source\QLQuanAn\BUS\bin\Debug\DAL.dll.config
+D:\Github\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csprojAssemblyReference.cache
+D:\Github\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Github\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\Github\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.dll
+D:\Github\DA.Net\Source\QLQuanAn\BUS\obj\Debug\BUS.pdb
