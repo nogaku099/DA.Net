@@ -41,9 +41,9 @@ D:\01 HOC\TrongDepTrai\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormTh
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\bin\Debug\DAL.dll.config
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormChinh.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormDangNhap.resources
-D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormHoaDon.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyBan.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyMon.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyNhanVien.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThongKe.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuenMatKhau.resources
+D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyHoaDon.resources

@@ -8,6 +8,20 @@ namespace DAL
 {
     public class DAL_TaiKhoan : KetNoi
     {
+        public TaiKhoan layTaiKhoanTheoMaNV(String maNhanVien)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.TaiKhoans
+                              where item.MaNhanVien == maNhanVien
+                              select item).FirstOrDefault();
+                return ketQua;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         public List<TaiKhoan> layDSTaiKhoan()
         {
             try
@@ -58,6 +72,23 @@ namespace DAL
                 
 
                
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool thayDoiMatKhauBangQuyenQL(String taiKhoan, String matKhauMoi)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.TaiKhoans
+                              where item.TaiKhoan1 == taiKhoan
+                              select item).FirstOrDefault();
+                ketQua.MatKhau = matKhauMoi;
+                ketNoi.SubmitChanges();
+                return true;
             }
             catch (Exception)
             {

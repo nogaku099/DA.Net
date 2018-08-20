@@ -1,6 +1,6 @@
 ﻿namespace QLQuanAn
 {
-    partial class FormHoaDon
+    partial class FormQuanLyHoaDon
     {
         /// <summary>
         /// Required designer variable.

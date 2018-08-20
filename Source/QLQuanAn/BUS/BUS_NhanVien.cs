@@ -14,5 +14,24 @@ namespace BUS
         {
             return dal_NhanVien.layNVTheoMaNV(maNhanVien);
         }
+        public List<NhanVien> layDSNhanVien()
+        {
+            return dal_NhanVien.layDSNhanVien();
+        }
+
+        public int demTongNhanVien()
+        {
+            return dal_NhanVien.demTongNhanVien();
+        }
+
+        public List<NhanVien> layDanhSachNhanVien(int soDongBoQua, int soDongCanLay)
+        {
+            return dal_NhanVien.layDanhSachNhanVien(soDongBoQua,soDongCanLay);
+        }
+
+        public String taoMaNhanVienMoi()
+        {
+            return dal_NhanVien.taoMaNhanVienMoi();
+        }
     }
 }

@@ -52,7 +52,7 @@ namespace QLQuanAn
                 MetroMessageBox.Show(Owner, "Chào "+nhanVienDangNhap.ChucVu+" " + nhanVienDangNhap.TenNhanVien, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 FormChinh form = new FormChinh(nhanVienDangNhap);
-                form.ShowDialog();
+                form.Show();
                 this.Hide();
             }
 

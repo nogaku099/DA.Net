@@ -9,17 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
-
 namespace QLQuanAn
 {
-    public partial class FormHoaDon : MetroForm
+    public partial class FormThemNhanVien : MetroForm
     {
-        public FormHoaDon()
+        public FormThemNhanVien()
         {
             InitializeComponent();
         }
 
-        private void FormHoaDon_Load(object sender, EventArgs e)
+        private void FormThemNhanVien_Load(object sender, EventArgs e)
         {
 
         }

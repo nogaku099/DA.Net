@@ -69,7 +69,8 @@
             this.txtTaiKhoan.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtTaiKhoan.CustomButton.UseSelectable = true;
             this.txtTaiKhoan.CustomButton.Visible = false;
-            this.txtTaiKhoan.Lines = new string[0];
+            this.txtTaiKhoan.Lines = new string[] {
+        "TK001"};
             this.txtTaiKhoan.Location = new System.Drawing.Point(224, 124);
             this.txtTaiKhoan.MaxLength = 32767;
             this.txtTaiKhoan.Name = "txtTaiKhoan";
@@ -81,6 +82,7 @@
             this.txtTaiKhoan.ShortcutsEnabled = true;
             this.txtTaiKhoan.Size = new System.Drawing.Size(210, 23);
             this.txtTaiKhoan.TabIndex = 0;
+            this.txtTaiKhoan.Text = "TK001";
             this.txtTaiKhoan.UseSelectable = true;
             this.txtTaiKhoan.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTaiKhoan.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -99,7 +101,8 @@
             this.txtMatKhau.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtMatKhau.CustomButton.UseSelectable = true;
             this.txtMatKhau.CustomButton.Visible = false;
-            this.txtMatKhau.Lines = new string[0];
+            this.txtMatKhau.Lines = new string[] {
+        "123456"};
             this.txtMatKhau.Location = new System.Drawing.Point(224, 193);
             this.txtMatKhau.MaxLength = 32767;
             this.txtMatKhau.Name = "txtMatKhau";
@@ -111,6 +114,7 @@
             this.txtMatKhau.ShortcutsEnabled = true;
             this.txtMatKhau.Size = new System.Drawing.Size(210, 23);
             this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.Text = "123456";
             this.txtMatKhau.UseSelectable = true;
             this.txtMatKhau.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtMatKhau.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
