@@ -29,25 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLyBan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.numericUpDownBan = new System.Windows.Forms.NumericUpDown();
             this.lblHienThiSoTrang = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.ban5 = new MetroFramework.Controls.MetroPanel();
+            this.txtMaBan5 = new MetroFramework.Controls.MetroLabel();
             this.ban6 = new MetroFramework.Controls.MetroPanel();
+            this.txtMaBan6 = new MetroFramework.Controls.MetroLabel();
             this.ban4 = new MetroFramework.Controls.MetroPanel();
+            this.txtMaBan4 = new MetroFramework.Controls.MetroLabel();
             this.ban2 = new MetroFramework.Controls.MetroPanel();
+            this.txtMaBan2 = new MetroFramework.Controls.MetroLabel();
             this.ban3 = new MetroFramework.Controls.MetroPanel();
+            this.txtMaBan3 = new MetroFramework.Controls.MetroLabel();
             this.ban1 = new MetroFramework.Controls.MetroPanel();
             this.txtMaBan1 = new MetroFramework.Controls.MetroLabel();
-            this.txtMaBan2 = new MetroFramework.Controls.MetroLabel();
-            this.txtMaBan3 = new MetroFramework.Controls.MetroLabel();
-            this.txtMaBan4 = new MetroFramework.Controls.MetroLabel();
-            this.txtMaBan6 = new MetroFramework.Controls.MetroLabel();
-            this.txtMaBan5 = new MetroFramework.Controls.MetroLabel();
-            this.gridBanHienTai = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBan)).BeginInit();
             this.ban5.SuspendLayout();
             this.ban6.SuspendLayout();
@@ -55,7 +51,6 @@
             this.ban2.SuspendLayout();
             this.ban3.SuspendLayout();
             this.ban1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBanHienTai)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDownBan
@@ -110,6 +105,16 @@
             this.ban5.VerticalScrollbarBarColor = true;
             this.ban5.VerticalScrollbarHighlightOnWheel = false;
             this.ban5.VerticalScrollbarSize = 10;
+            this.ban5.Click += new System.EventHandler(this.ban5_Click);
+            // 
+            // txtMaBan5
+            // 
+            this.txtMaBan5.AutoSize = true;
+            this.txtMaBan5.Location = new System.Drawing.Point(56, 129);
+            this.txtMaBan5.Name = "txtMaBan5";
+            this.txtMaBan5.Size = new System.Drawing.Size(102, 19);
+            this.txtMaBan5.TabIndex = 2;
+            this.txtMaBan5.Text = "Hiển thị mã bàn";
             // 
             // ban6
             // 
@@ -127,6 +132,16 @@
             this.ban6.VerticalScrollbarBarColor = true;
             this.ban6.VerticalScrollbarHighlightOnWheel = false;
             this.ban6.VerticalScrollbarSize = 10;
+            this.ban6.Click += new System.EventHandler(this.ban6_Click);
+            // 
+            // txtMaBan6
+            // 
+            this.txtMaBan6.AutoSize = true;
+            this.txtMaBan6.Location = new System.Drawing.Point(56, 134);
+            this.txtMaBan6.Name = "txtMaBan6";
+            this.txtMaBan6.Size = new System.Drawing.Size(102, 19);
+            this.txtMaBan6.TabIndex = 2;
+            this.txtMaBan6.Text = "Hiển thị mã bàn";
             // 
             // ban4
             // 
@@ -144,6 +159,18 @@
             this.ban4.VerticalScrollbarBarColor = true;
             this.ban4.VerticalScrollbarHighlightOnWheel = false;
             this.ban4.VerticalScrollbarSize = 10;
+            this.ban4.Click += new System.EventHandler(this.ban4_Click);
+            // 
+            // txtMaBan4
+            // 
+            this.txtMaBan4.AutoSize = true;
+            this.txtMaBan4.BackColor = System.Drawing.Color.White;
+            this.txtMaBan4.ForeColor = System.Drawing.Color.Black;
+            this.txtMaBan4.Location = new System.Drawing.Point(61, 134);
+            this.txtMaBan4.Name = "txtMaBan4";
+            this.txtMaBan4.Size = new System.Drawing.Size(102, 19);
+            this.txtMaBan4.TabIndex = 2;
+            this.txtMaBan4.Text = "Hiển thị mã bàn";
             // 
             // ban2
             // 
@@ -161,6 +188,16 @@
             this.ban2.VerticalScrollbarBarColor = true;
             this.ban2.VerticalScrollbarHighlightOnWheel = false;
             this.ban2.VerticalScrollbarSize = 10;
+            this.ban2.Click += new System.EventHandler(this.ban2_Click);
+            // 
+            // txtMaBan2
+            // 
+            this.txtMaBan2.AutoSize = true;
+            this.txtMaBan2.Location = new System.Drawing.Point(56, 134);
+            this.txtMaBan2.Name = "txtMaBan2";
+            this.txtMaBan2.Size = new System.Drawing.Size(102, 19);
+            this.txtMaBan2.TabIndex = 2;
+            this.txtMaBan2.Text = "Hiển thị mã bàn";
             // 
             // ban3
             // 
@@ -178,6 +215,16 @@
             this.ban3.VerticalScrollbarBarColor = true;
             this.ban3.VerticalScrollbarHighlightOnWheel = false;
             this.ban3.VerticalScrollbarSize = 10;
+            this.ban3.Click += new System.EventHandler(this.ban3_Click);
+            // 
+            // txtMaBan3
+            // 
+            this.txtMaBan3.AutoSize = true;
+            this.txtMaBan3.Location = new System.Drawing.Point(61, 129);
+            this.txtMaBan3.Name = "txtMaBan3";
+            this.txtMaBan3.Size = new System.Drawing.Size(102, 19);
+            this.txtMaBan3.TabIndex = 2;
+            this.txtMaBan3.Text = "Hiển thị mã bàn";
             // 
             // ban1
             // 
@@ -196,6 +243,7 @@
             this.ban1.VerticalScrollbarBarColor = true;
             this.ban1.VerticalScrollbarHighlightOnWheel = false;
             this.ban1.VerticalScrollbarSize = 10;
+            this.ban1.Click += new System.EventHandler(this.ban1_Click);
             // 
             // txtMaBan1
             // 
@@ -206,102 +254,11 @@
             this.txtMaBan1.TabIndex = 2;
             this.txtMaBan1.Text = "Hiển thị mã bàn";
             // 
-            // txtMaBan2
-            // 
-            this.txtMaBan2.AutoSize = true;
-            this.txtMaBan2.Location = new System.Drawing.Point(56, 134);
-            this.txtMaBan2.Name = "txtMaBan2";
-            this.txtMaBan2.Size = new System.Drawing.Size(102, 19);
-            this.txtMaBan2.TabIndex = 2;
-            this.txtMaBan2.Text = "Hiển thị mã bàn";
-            // 
-            // txtMaBan3
-            // 
-            this.txtMaBan3.AutoSize = true;
-            this.txtMaBan3.Location = new System.Drawing.Point(61, 129);
-            this.txtMaBan3.Name = "txtMaBan3";
-            this.txtMaBan3.Size = new System.Drawing.Size(102, 19);
-            this.txtMaBan3.TabIndex = 2;
-            this.txtMaBan3.Text = "Hiển thị mã bàn";
-            // 
-            // txtMaBan4
-            // 
-            this.txtMaBan4.AutoSize = true;
-            this.txtMaBan4.BackColor = System.Drawing.Color.White;
-            this.txtMaBan4.ForeColor = System.Drawing.Color.Black;
-            this.txtMaBan4.Location = new System.Drawing.Point(61, 134);
-            this.txtMaBan4.Name = "txtMaBan4";
-            this.txtMaBan4.Size = new System.Drawing.Size(102, 19);
-            this.txtMaBan4.TabIndex = 2;
-            this.txtMaBan4.Text = "Hiển thị mã bàn";
-            // 
-            // txtMaBan6
-            // 
-            this.txtMaBan6.AutoSize = true;
-            this.txtMaBan6.Location = new System.Drawing.Point(56, 134);
-            this.txtMaBan6.Name = "txtMaBan6";
-            this.txtMaBan6.Size = new System.Drawing.Size(102, 19);
-            this.txtMaBan6.TabIndex = 2;
-            this.txtMaBan6.Text = "Hiển thị mã bàn";
-            // 
-            // txtMaBan5
-            // 
-            this.txtMaBan5.AutoSize = true;
-            this.txtMaBan5.Location = new System.Drawing.Point(56, 129);
-            this.txtMaBan5.Name = "txtMaBan5";
-            this.txtMaBan5.Size = new System.Drawing.Size(102, 19);
-            this.txtMaBan5.TabIndex = 2;
-            this.txtMaBan5.Text = "Hiển thị mã bàn";
-            // 
-            // gridBanHienTai
-            // 
-            this.gridBanHienTai.AllowUserToResizeRows = false;
-            this.gridBanHienTai.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridBanHienTai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.gridBanHienTai.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.gridBanHienTai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridBanHienTai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridBanHienTai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridBanHienTai.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gridBanHienTai.EnableHeadersVisualStyles = false;
-            this.gridBanHienTai.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.gridBanHienTai.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridBanHienTai.Location = new System.Drawing.Point(811, 557);
-            this.gridBanHienTai.Name = "gridBanHienTai";
-            this.gridBanHienTai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridBanHienTai.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.gridBanHienTai.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.gridBanHienTai.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridBanHienTai.Size = new System.Drawing.Size(240, 150);
-            this.gridBanHienTai.TabIndex = 8;
-            // 
             // FormQuanLyBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1330, 794);
-            this.Controls.Add(this.gridBanHienTai);
+            this.ClientSize = new System.Drawing.Size(1080, 601);
             this.Controls.Add(this.numericUpDownBan);
             this.Controls.Add(this.lblHienThiSoTrang);
             this.Controls.Add(this.metroLabel1);
@@ -327,7 +284,6 @@
             this.ban3.PerformLayout();
             this.ban1.ResumeLayout(false);
             this.ban1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridBanHienTai)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,6 +305,5 @@
         private MetroFramework.Controls.MetroLabel txtMaBan4;
         private MetroFramework.Controls.MetroLabel txtMaBan2;
         private MetroFramework.Controls.MetroLabel txtMaBan3;
-        private MetroFramework.Controls.MetroGrid gridBanHienTai;
     }
 }

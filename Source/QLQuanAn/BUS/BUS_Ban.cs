@@ -35,5 +35,9 @@ namespace BUS
         {
             return dal_Ban.layDanhSachBan(soDongBoQua, soDongCanLay);
         }
+        public List<Ban> layDSBanDangPhucVu()
+        {
+            return dal_Ban.layDSBanDangPhucVu();
+        }
     }
 }

@@ -78,6 +78,21 @@ namespace DAL
             return ketQua;
         }
 
+        public List<Ban> layDSBanDangPhucVu()
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.Bans
+                              where item.TrangThai == "Busy"
+                              select item).ToList();
+                return ketQua;
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+        }
+
 
 
     }

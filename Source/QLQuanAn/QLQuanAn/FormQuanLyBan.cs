@@ -136,7 +136,7 @@ namespace QLQuanAn
             lblHienThiSoTrang.Text = tongSoTrang.ToString();
 
             dsBanHienTai = lstBan;
-            gridBanHienTai.DataSource = dsBanHienTai;
+            
             hienThiBanLenGiaoDien();
         }
 
@@ -146,6 +146,43 @@ namespace QLQuanAn
             {
                 phanTrangBan();
             }
+        }
+
+        
+        private void ban1_Click(object sender, EventArgs e)
+        {
+            FormDatMon form = new FormDatMon(dsBanHienTai[0].MaBan, dsBanHienTai[0].TrangThai);
+            form.Show();
+        }
+
+        private void ban2_Click(object sender, EventArgs e)
+        {
+            FormDatMon form = new FormDatMon(dsBanHienTai[1].MaBan, dsBanHienTai[1].TrangThai);
+            form.Show();
+        }
+
+        private void ban3_Click(object sender, EventArgs e)
+        {
+            FormDatMon form = new FormDatMon(dsBanHienTai[2].MaBan, dsBanHienTai[2].TrangThai);
+            form.Show();
+        }
+
+        private void ban4_Click(object sender, EventArgs e)
+        {
+            FormDatMon form = new FormDatMon(dsBanHienTai[3].MaBan, dsBanHienTai[3].TrangThai);
+            form.Show();
+        }
+
+        private void ban5_Click(object sender, EventArgs e)
+        {
+            FormDatMon form = new FormDatMon(dsBanHienTai[4].MaBan, dsBanHienTai[4].TrangThai);
+            form.Show();
+        }
+
+        private void ban6_Click(object sender, EventArgs e)
+        {
+            FormDatMon form = new FormDatMon(dsBanHienTai[5].MaBan, dsBanHienTai[5].TrangThai);
+            form.Show();
         }
     }
 }

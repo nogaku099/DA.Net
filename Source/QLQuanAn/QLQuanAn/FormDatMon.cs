@@ -9,19 +9,60 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
+using DAL;
+using BUS;
 
 namespace QLQuanAn
 {
     public partial class FormDatMon : MetroForm
     {
+        #region DAL&BUS
+        BUS_Ban bus_Ban = new BUS_Ban();
+        DAL_Ban dal_Ban = new DAL_Ban();
+        #endregion
+        List<Ban> lstBan = new List<Ban>();
+       
+        List<String> lstMaBan = new List<String>();
+        String maBanDangChon = "";
+        String trangThaiBanDangChon = "";
         public FormDatMon()
         {
             InitializeComponent();
         }
+        public FormDatMon(String maBan, String trangThai)
+        {
+            InitializeComponent();
+            this.maBanDangChon = maBan;
+            this.trangThaiBanDangChon = trangThai;
+            
+        }
 
-        private void FormDatMon_Load(object sender, EventArgs e)
+        public void capNhatHoaDonTheoMaBan()
         {
 
+        }
+        private void FormDatMon_Load(object sender, EventArgs e)
+        {
+            lblMaBanDangPhucVu.Text = "Bàn " + maBanDangChon;
+            String temp = maBanDangChon;
+            lstBan = bus_Ban.layDSBan();
+            foreach(Ban ban in lstBan)
+            {
+                lstMaBan.Add(ban.MaBan);
+            }
+            listBan.DataSource = lstMaBan;
+            //cmbEmployeeStatus.SelectedIndex = cmbEmployeeStatus.FindString(employee.employmentstatus);
+            listBan.SelectedIndex = listBan.FindString(temp);
+            //MessageBox.Show(temp);
+            
+            
+        }
+
+        private void listBan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            maBanDangChon = listBan.SelectedItem.ToString();
+            lblMaBanDangPhucVu.Text = "Bàn " + maBanDangChon;
+            //MessageBox.Show(maBanDangChon);
         }
     }
 }
