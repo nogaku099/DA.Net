@@ -75,5 +75,43 @@ namespace DAL
                 return null;
             }
         }
+
+        public bool themNhanVien(NhanVien nhanVienMoi)
+        {
+            try
+            {
+                ketNoi.NhanViens.InsertOnSubmit(nhanVienMoi);
+                ketNoi.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool capNhatNhanVien(NhanVien nhanVien)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.NhanViens
+                              where item.MaNhanVien == nhanVien.MaNhanVien
+                              select item).FirstOrDefault();
+
+                ketQua.TenNhanVien = nhanVien.TenNhanVien;
+                ketQua.DiaChi = nhanVien.DiaChi;
+                ketQua.ChucVu = nhanVien.ChucVu;
+                ketQua.NgaySinh = nhanVien.NgaySinh;
+                ketQua.SoDienThoai = nhanVien.SoDienThoai;
+
+                ketNoi.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

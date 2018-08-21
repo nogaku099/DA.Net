@@ -122,13 +122,14 @@
             // 
             this.btnDangXuat.ActiveControl = null;
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDangXuat.Location = new System.Drawing.Point(23, 691);
+            this.btnDangXuat.Location = new System.Drawing.Point(802, 412);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(87, 54);
+            this.btnDangXuat.Size = new System.Drawing.Size(216, 78);
             this.btnDangXuat.TabIndex = 1;
-            this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.TileImage = global::QLQuanAn.Properties.Resources.icons8_exit_26;
-            this.btnDangXuat.TileImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDangXuat.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDangXuat.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.btnDangXuat.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnDangXuat.UseSelectable = true;
             this.btnDangXuat.UseTileImage = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);

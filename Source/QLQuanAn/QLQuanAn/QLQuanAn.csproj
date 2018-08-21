@@ -69,6 +69,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormChinhSuaThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChinhSuaThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormChinhSuaThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDatMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatMon.Designer.cs">
+      <DependentUpon>FormDatMon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuanLyHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     <Compile Include="FormQuenMatKhau.Designer.cs">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThanhToan.Designer.cs">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,8 +146,14 @@
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChinhSuaThongTinNhanVien.resx">
+      <DependentUpon>FormChinhSuaThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDatMon.resx">
+      <DependentUpon>FormDatMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLyHoaDon.resx">
       <DependentUpon>FormQuanLyHoaDon.cs</DependentUpon>
@@ -145,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuenMatKhau.resx">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThanhToan.resx">
+      <DependentUpon>FormThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemNhanVien.resx">
       <DependentUpon>FormThemNhanVien.cs</DependentUpon>
@@ -200,6 +227,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-exit-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ban_Edited.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -49,5 +49,15 @@ namespace BUS
         {
             return dal_TaiKhoan.layTaiKhoanTheoMaNV(maNhanVien);
         }
+
+        public String taoMaTKMoi()
+        {
+            return dal_TaiKhoan.taoMaTKMoi();
+        }
+
+        public bool themTaiKhoan(TaiKhoan taiKhoanMoi)
+        {
+            return dal_TaiKhoan.themTaiKhoan(taiKhoanMoi);
+        }
     }
 }

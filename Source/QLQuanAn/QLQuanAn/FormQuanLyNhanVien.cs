@@ -24,6 +24,7 @@ namespace QLQuanAn
         BUS_TaiKhoan bus_TaiKhoan = new BUS_TaiKhoan();
         #endregion
         int soDongLoad = 10;
+        String maNhanVienDangChon = "";
         public FormQuanLyNhanVien()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace QLQuanAn
                 tongSoTrang = bus_NhanVien.demTongNhanVien() / soDongLoad + 1;
             }
             else tongSoTrang = bus_NhanVien.demTongNhanVien() / soDongLoad;
-            lblHienThiSoTrang.Text = "/" + tongSoTrang;
+            lblHienThiSoTrang.Text = tongSoTrang.ToString();
             List<NhanVien> lstNhanVien = new List<NhanVien>();
             if (bus_NhanVien.demTongNhanVien() >= soDongLoad)
             {
@@ -108,6 +109,7 @@ namespace QLQuanAn
             {
                 String taiKhoanHienThi = lblHienThiTenTaiKhoan.Text;
                 bus_TaiKhoan.thayDoiMatKhauBangQuyenQL(taiKhoanHienThi, matKhauMoi);
+                MetroMessageBox.Show(Owner, "Mật khẩu đã được cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -116,6 +118,7 @@ namespace QLQuanAn
             //string maLop = gridLop.CurrentRow.Cells[0].Value.ToString();
             //gridSinhVien.DataSource = bus_SinhVien.laySinhVienTheoMaLop(maLop);
             String maNhanVien = gridNhanVien.CurrentRow.Cells[0].Value.ToString();
+            maNhanVienDangChon = maNhanVien;
             TaiKhoan taiKhoanCuaNhanVienDangChon = bus_TaiKhoan.layTaiKhoanTheoMaNV(maNhanVien);
             if (taiKhoanCuaNhanVienDangChon == null)
             {
@@ -131,7 +134,14 @@ namespace QLQuanAn
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
+            FormThemNhanVien formThemNhanVien = new FormThemNhanVien();
+            formThemNhanVien.Show();
+        }
 
+        private void btnChinhSuaThongTinNhanVien_Click(object sender, EventArgs e)
+        {
+            FormChinhSuaThongTinNhanVien formChinhSuaThongTinNhanVien = new FormChinhSuaThongTinNhanVien(maNhanVienDangChon);
+            formChinhSuaThongTinNhanVien.Show();
         }
     }
 }

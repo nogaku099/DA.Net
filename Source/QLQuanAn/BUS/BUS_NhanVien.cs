@@ -33,5 +33,15 @@ namespace BUS
         {
             return dal_NhanVien.taoMaNhanVienMoi();
         }
+
+        public bool themNhanVien(NhanVien nhanVienMoi)
+        {
+            return dal_NhanVien.themNhanVien(nhanVienMoi);
+        }
+
+        public bool capNhatNhanVien(NhanVien nhanVien)
+        {
+            return dal_NhanVien.capNhatNhanVien(nhanVien);
+        }
     }
 }

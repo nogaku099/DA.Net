@@ -63,6 +63,16 @@ namespace QLQuanAn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ban_Edited {
+            get {
+                object obj = ResourceManager.GetObject("Ban_Edited", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_exit_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8_exit_26", resourceCulture);

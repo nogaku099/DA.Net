@@ -55,6 +55,10 @@ namespace QLQuanAn
                 form.Show();
                 this.Hide();
             }
+            else
+            {
+                MetroMessageBox.Show(Owner, "Tài khoản hoặc mật khẩu không đúng. \n Vui lòng kiểm tra lại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
         private void btnDangNhap_Click(object sender, EventArgs e)

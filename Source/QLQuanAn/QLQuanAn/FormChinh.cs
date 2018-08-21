@@ -36,10 +36,10 @@ namespace QLQuanAn
             lblHienThiUser.Text = nhanVienDangNhap.ChucVu + " " + nhanVienDangNhap.TenNhanVien;
             lblNgayThangHienTai.Text = DateTime.Today.ToString("dd-MM-yyyy");
 
-            if (nhanVienDangNhap.ChucVu == "NhanVien")
+            if (nhanVienDangNhap.ChucVu == "NV")
             {
-                chucNangQLNhanvien.Visible = false;
-                chucNangQLMon.Visible = false;
+                chucNangQLNhanvien.Enabled = false;
+                chucNangQLMon.Enabled = false;
             }
         }
 

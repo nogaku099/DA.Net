@@ -139,6 +139,23 @@ namespace DAL
                 return false;
             }
         }
+        public String taoMaTKMoi()
+        {
+            try
+            {
+
+                int count = ketNoi.TaiKhoans.Count() + 1;
+                int month = Int32.Parse(DateTime.Now.Month.ToString());
+                int year = Int32.Parse(DateTime.Now.Year.ToString());
+                int tong = month + year;
+                String ma = "TK00" + tong + count.ToString();
+                return ma;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
         public bool dangNhap(String taiKhoan, String matKhau)
         {
             try
@@ -154,6 +171,20 @@ namespace DAL
                 {
                     return false;
                 }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool themTaiKhoan(TaiKhoan taiKhoanMoi)
+        {
+            try
+            {
+                ketNoi.TaiKhoans.InsertOnSubmit(taiKhoanMoi);
+                ketNoi.SubmitChanges();
+                return true;
             }
             catch (Exception)
             {

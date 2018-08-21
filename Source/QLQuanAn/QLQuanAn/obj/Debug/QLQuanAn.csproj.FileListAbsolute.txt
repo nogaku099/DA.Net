@@ -47,3 +47,7 @@ D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyNhanVien.
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThongKe.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuenMatKhau.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormQuanLyHoaDon.resources
+D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThemNhanVien.resources
+D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormChinhSuaThongTinNhanVien.resources
+D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormDatMon.resources
+D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThanhToan.resources

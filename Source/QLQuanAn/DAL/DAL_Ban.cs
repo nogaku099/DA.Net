@@ -40,5 +40,45 @@ namespace DAL
                 return false;
             }
         }
+
+        public Ban layBanTheoMaBan(String maBan)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.Bans
+                              where item.MaBan == maBan
+                              select item).FirstOrDefault();
+                return ketQua;
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+        }
+
+        public int demTongBan()
+        {
+            try
+            {
+                int count = 0;
+                count = ketNoi.Bans.Count();
+                return count;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public List<Ban> layDanhSachBan(int soDongBoQua, int soDongCanLay)
+        {
+            var ketQua = (from item in ketNoi.Bans.Skip(soDongBoQua).Take(soDongCanLay)
+                          select item).ToList();
+
+            return ketQua;
+        }
+
+
+
     }
 }

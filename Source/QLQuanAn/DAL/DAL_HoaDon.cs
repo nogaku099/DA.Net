@@ -20,5 +20,39 @@ namespace DAL
                 return null;
             }
         }
+
+        public HoaDon layHoaDonTheoMaHoaDon(String maHoaDon)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.HoaDons
+                              where item.MaHoaDon == maHoaDon
+                              select item).FirstOrDefault();
+                return ketQua;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public bool capNhatTrangThaiHoaDon(HoaDon hoaDon)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.HoaDons
+                              where item.MaHoaDon == hoaDon.MaHoaDon
+                              select item).FirstOrDefault();
+
+                ketQua.TrangThaiHoaDon= hoaDon.TrangThaiHoaDon;
+                ketNoi.SubmitChanges();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }
