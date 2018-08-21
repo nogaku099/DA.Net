@@ -41,6 +41,17 @@ namespace QLQuanAn
         {
 
         }
+        public void chuyenTrangThaiNutThanhToan(String trangThaiBan)
+        {
+            if(trangThaiBan == "Free")
+            {
+                btnThanhToan.Enabled = false;
+            }
+            else
+            {
+                btnThanhToan.Enabled = true;
+            }
+        }
         private void FormDatMon_Load(object sender, EventArgs e)
         {
             lblMaBanDangPhucVu.Text = "Bàn " + maBanDangChon;
@@ -51,9 +62,10 @@ namespace QLQuanAn
                 lstMaBan.Add(ban.MaBan);
             }
             listBan.DataSource = lstMaBan;
-            //cmbEmployeeStatus.SelectedIndex = cmbEmployeeStatus.FindString(employee.employmentstatus);
+            
             listBan.SelectedIndex = listBan.FindString(temp);
-            //MessageBox.Show(temp);
+            //MessageBox.Show(trangThaiBanDangChon);
+            chuyenTrangThaiNutThanhToan(trangThaiBanDangChon);
             
             
         }
@@ -63,6 +75,7 @@ namespace QLQuanAn
             maBanDangChon = listBan.SelectedItem.ToString();
             lblMaBanDangPhucVu.Text = "Bàn " + maBanDangChon;
             //MessageBox.Show(maBanDangChon);
+            chuyenTrangThaiNutThanhToan(trangThaiBanDangChon);
         }
     }
 }
