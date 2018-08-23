@@ -23,10 +23,16 @@ namespace QLQuanAn
         int soDongLoad = 6;
         List<Label> lstLabel = new List<Label>();
         List<Panel> lstPanel = new List<Panel>();
-        
+        String maNV = "";
         public FormQuanLyBan()
         {
             InitializeComponent();
+        }
+
+        public FormQuanLyBan(String maNV)
+        {
+            InitializeComponent();
+            this.maNV = maNV;
         }
 
         private void FormQuanLyBan_Load(object sender, EventArgs e)
@@ -151,37 +157,37 @@ namespace QLQuanAn
         
         private void ban1_Click(object sender, EventArgs e)
         {
-            FormDatMon form = new FormDatMon(dsBanHienTai[0].MaBan, dsBanHienTai[0].TrangThai);
+            FormDatMon form = new FormDatMon(dsBanHienTai[0].MaBan, dsBanHienTai[0].TrangThai,maNV);
             form.Show();
         }
 
         private void ban2_Click(object sender, EventArgs e)
         {
-            FormDatMon form = new FormDatMon(dsBanHienTai[1].MaBan, dsBanHienTai[1].TrangThai);
+            FormDatMon form = new FormDatMon(dsBanHienTai[1].MaBan, dsBanHienTai[1].TrangThai, maNV);
             form.Show();
         }
 
         private void ban3_Click(object sender, EventArgs e)
         {
-            FormDatMon form = new FormDatMon(dsBanHienTai[2].MaBan, dsBanHienTai[2].TrangThai);
+            FormDatMon form = new FormDatMon(dsBanHienTai[2].MaBan, dsBanHienTai[2].TrangThai, maNV);
             form.Show();
         }
 
         private void ban4_Click(object sender, EventArgs e)
         {
-            FormDatMon form = new FormDatMon(dsBanHienTai[3].MaBan, dsBanHienTai[3].TrangThai);
+            FormDatMon form = new FormDatMon(dsBanHienTai[3].MaBan, dsBanHienTai[3].TrangThai, maNV);
             form.Show();
         }
 
         private void ban5_Click(object sender, EventArgs e)
         {
-            FormDatMon form = new FormDatMon(dsBanHienTai[4].MaBan, dsBanHienTai[4].TrangThai);
+            FormDatMon form = new FormDatMon(dsBanHienTai[4].MaBan, dsBanHienTai[4].TrangThai, maNV);
             form.Show();
         }
 
         private void ban6_Click(object sender, EventArgs e)
         {
-            FormDatMon form = new FormDatMon(dsBanHienTai[5].MaBan, dsBanHienTai[5].TrangThai);
+            FormDatMon form = new FormDatMon(dsBanHienTai[5].MaBan, dsBanHienTai[5].TrangThai, maNV);
             form.Show();
         }
     }

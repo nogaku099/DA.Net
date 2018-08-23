@@ -25,5 +25,15 @@ namespace BUS
         {
             return dal_HoaDon.capNhatTrangThaiHoaDon(hoaDon);
         }
+
+        public String taoMaHDMoi()
+        {
+            return dal_HoaDon.taoMaHDMoi();
+        }
+
+        public bool themHoaDon(HoaDon item)
+        {
+            return dal_HoaDon.themHoaDon(item);
+        }
     }
 }

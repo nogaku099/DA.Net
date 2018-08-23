@@ -231,5 +231,15 @@
   <ItemGroup>
     <None Include="Resources\Ban_Edited.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-20.png" />
+    <None Include="Resources\icons8-below-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-scroll-up-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

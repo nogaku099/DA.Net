@@ -16,5 +16,9 @@ namespace DAL
             this.DuongDan = duongDan;
             this.GiaSanPham = giaSanPham;
         }
+        public float getGiaSanPham()
+        {
+            return float.Parse(this.GiaSanPham.ToString());
+        }
     }
 }

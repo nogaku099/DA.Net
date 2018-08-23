@@ -58,7 +58,7 @@ namespace QLQuanAn
 
         private void chucNangQLBan_Click(object sender, EventArgs e)
         {
-            FormQuanLyBan formQuanLyBan = new FormQuanLyBan();
+            FormQuanLyBan formQuanLyBan = new FormQuanLyBan(nhanVienDangNhap.MaNhanVien);
             formQuanLyBan.Show();
         }
 

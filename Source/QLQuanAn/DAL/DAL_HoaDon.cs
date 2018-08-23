@@ -54,5 +54,37 @@ namespace DAL
                 return false;
             }
         }
+
+        public String taoMaHDMoi()
+        {
+            try
+            {
+
+                int count = ketNoi.HoaDons.Count() + 1;
+                int month = Int32.Parse(DateTime.Now.Month.ToString());
+                int year = Int32.Parse(DateTime.Now.Year.ToString());
+                int tong = month + year;
+                String ma = "HD00" + tong + count.ToString();
+                return ma;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public bool themHoaDon(HoaDon item)
+        {
+            try
+            {
+                ketNoi.HoaDons.InsertOnSubmit(item);
+                ketNoi.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

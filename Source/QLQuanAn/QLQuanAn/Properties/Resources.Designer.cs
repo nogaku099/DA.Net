@@ -73,9 +73,39 @@ namespace QLQuanAn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_below_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_below_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_cancel_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_exit_26 {
             get {
                 object obj = ResourceManager.GetObject("icons8_exit_26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_scroll_up_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_scroll_up_20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
