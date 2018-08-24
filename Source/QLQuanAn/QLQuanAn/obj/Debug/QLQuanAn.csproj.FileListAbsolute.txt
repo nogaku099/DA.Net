@@ -51,3 +51,4 @@ D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThemNhanVien.re
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormChinhSuaThongTinNhanVien.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormDatMon.resources
 D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThanhToan.resources
+D:\Github\DA.Net\Source\QLQuanAn\QLQuanAn\obj\Debug\QLQuanAn.FormThemMon.resources

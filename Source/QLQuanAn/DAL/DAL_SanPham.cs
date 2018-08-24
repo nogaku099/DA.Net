@@ -72,5 +72,72 @@ namespace DAL
             }
         }
 
+        public String taoMaSPMoi()
+        {
+            try
+            {
+
+                int count = ketNoi.SanPhams.Count() + 1;
+                int month = Int32.Parse(DateTime.Now.Month.ToString());
+                int year = Int32.Parse(DateTime.Now.Year.ToString());
+                int tong = month + year;
+                String ma = "SP00" + tong + count.ToString();
+                return ma;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public bool themSanPham(SanPham sanPham)
+        {
+            try
+            {
+                ketNoi.SanPhams.InsertOnSubmit(sanPham);
+                ketNoi.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public SanPham laySanPhamTheoMaSP(String maSP)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.SanPhams
+                              where item.MaSanPham == maSP
+                              select item).FirstOrDefault();
+                return ketQua;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public bool capNhatSanPham(SanPham sanPham)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.SanPhams
+                              where item.MaSanPham == sanPham.MaSanPham
+                              select item).FirstOrDefault();
+                ketQua.TenSanPham = sanPham.TenSanPham;
+                ketQua.GiaSanPham = sanPham.GiaSanPham;
+                ketQua.LoaiSanPham = sanPham.LoaiSanPham;
+                ketNoi.SubmitChanges();
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

@@ -42,6 +42,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.lblHienThiSoTrangChiTietHoaDon = new MetroFramework.Controls.MetroLabel();
             this.numericUpDownChiTietHoaDon = new System.Windows.Forms.NumericUpDown();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.metroDateTime2 = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.gridHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridChiTietHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHoaDon)).BeginInit();
@@ -210,11 +212,29 @@
             this.numericUpDownChiTietHoaDon.Visible = false;
             this.numericUpDownChiTietHoaDon.ValueChanged += new System.EventHandler(this.numericUpDownChiTietHoaDon_ValueChanged);
             // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.Location = new System.Drawing.Point(474, 45);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.TabIndex = 8;
+            // 
+            // metroDateTime2
+            // 
+            this.metroDateTime2.Location = new System.Drawing.Point(246, 45);
+            this.metroDateTime2.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime2.Name = "metroDateTime2";
+            this.metroDateTime2.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime2.TabIndex = 8;
+            // 
             // FormQuanLyHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.metroDateTime2);
+            this.Controls.Add(this.metroDateTime1);
             this.Controls.Add(this.numericUpDownChiTietHoaDon);
             this.Controls.Add(this.numericUpDownHoaDon);
             this.Controls.Add(this.lblHienThiSoTrangChiTietHoaDon);
@@ -246,5 +266,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel lblHienThiSoTrangChiTietHoaDon;
         private System.Windows.Forms.NumericUpDown numericUpDownChiTietHoaDon;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private MetroFramework.Controls.MetroDateTime metroDateTime2;
     }
 }

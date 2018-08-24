@@ -34,5 +34,25 @@ namespace BUS
         {
             return dal_SanPham.layGiaSPTheoMaSP(maSP);
         }
+
+        public String taoMaSPMoi()
+        {
+            return dal_SanPham.taoMaSPMoi();
+        }
+
+        public bool themSanPham(SanPham sanPham)
+        {
+            return dal_SanPham.themSanPham(sanPham);
+        }
+
+        public SanPham laySanPhamTheoMaSP(String maSP)
+        {
+            return dal_SanPham.laySanPhamTheoMaSP(maSP);
+        }
+
+        public bool capNhatSanPham(SanPham sanPham)
+        {
+            return dal_SanPham.capNhatSanPham(sanPham);
+        }
     }
 }
