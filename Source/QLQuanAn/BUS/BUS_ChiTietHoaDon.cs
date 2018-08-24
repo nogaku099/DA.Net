@@ -25,6 +25,36 @@ namespace BUS
         {
             return dal_ChiTietHoaDon.themDSChiTietHoaDon(lstItem);
         }
+
+        public List<ChiTietHoaDon> layDSChiTietHoaDonTheoMaHoaDon(String maHoaDon)
+        {
+            return dal_ChiTietHoaDon.layDSChiTietHoaDonTheoMaHoaDon(maHoaDon);
+        }
+
+        public bool xoaChiTietHoaDonTheoMaHoaDon(String maHD)
+        {
+            return dal_ChiTietHoaDon.xoaChiTietHoaDonTheoMaHoaDon(maHD);
+        }
+
+        public String taoMaCTHDMoiUpdate()
+        {
+            return dal_ChiTietHoaDon.taoMaCTHDMoiUpdate();
+        }
+
+        public bool chinhSuaSoLuongChiTietHoaDon(ChiTietHoaDon chiTietHoaDon)
+        {
+            return dal_ChiTietHoaDon.chinhSuaSoLuongChiTietHoaDon(chiTietHoaDon);
+        }
+
+        public bool xoaCTHD(ChiTietHoaDon chiTietHoaDon)
+        {
+            return dal_ChiTietHoaDon.xoaCTHD(chiTietHoaDon);
+        }
+
+        public List<ChiTietHoaDon> layDanhSachChiTietHoaDon(int soDongBoQua, int soDongCanLay)
+        {
+            return dal_ChiTietHoaDon.layDanhSachChiTietHoaDon(soDongBoQua, soDongCanLay);
+        }
     }
 
 

@@ -35,5 +35,20 @@ namespace BUS
         {
             return dal_HoaDon.themHoaDon(item);
         }
+
+        public HoaDon layHDTheoMaBanVaTrangThaiBusy(String maBan)
+        {
+            return dal_HoaDon.layHDTheoMaBanVaTrangThaiBusy(maBan);
+        }
+
+        public bool capNhatTongTienHoaDonTheoMaHoaDon(String maHD, float tongTien)
+        {
+            return dal_HoaDon.capNhatTongTienHoaDonTheoMaHoaDon(maHD, tongTien);
+        }
+
+        public List<HoaDon> layDanhSachHoaDon(int soDongBoQua, int soDongCanLay)
+        {
+            return dal_HoaDon.layDanhSachHoaDon(soDongBoQua, soDongCanLay);
+        }
     }
 }

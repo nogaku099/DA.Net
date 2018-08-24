@@ -76,9 +76,9 @@
             this.lblHienThiSoTrang.AutoSize = true;
             this.lblHienThiSoTrang.Location = new System.Drawing.Point(529, 557);
             this.lblHienThiSoTrang.Name = "lblHienThiSoTrang";
-            this.lblHienThiSoTrang.Size = new System.Drawing.Size(83, 19);
+            this.lblHienThiSoTrang.Size = new System.Drawing.Size(74, 19);
             this.lblHienThiSoTrang.TabIndex = 6;
-            this.lblHienThiSoTrang.Text = "metroLabel2";
+            this.lblHienThiSoTrang.Text = "Tổng trang";
             // 
             // metroLabel1
             // 
@@ -110,7 +110,8 @@
             // txtMaBan5
             // 
             this.txtMaBan5.AutoSize = true;
-            this.txtMaBan5.Location = new System.Drawing.Point(56, 129);
+            this.txtMaBan5.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaBan5.Location = new System.Drawing.Point(80, 129);
             this.txtMaBan5.Name = "txtMaBan5";
             this.txtMaBan5.Size = new System.Drawing.Size(102, 19);
             this.txtMaBan5.TabIndex = 2;
@@ -137,7 +138,8 @@
             // txtMaBan6
             // 
             this.txtMaBan6.AutoSize = true;
-            this.txtMaBan6.Location = new System.Drawing.Point(56, 134);
+            this.txtMaBan6.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaBan6.Location = new System.Drawing.Point(80, 134);
             this.txtMaBan6.Name = "txtMaBan6";
             this.txtMaBan6.Size = new System.Drawing.Size(102, 19);
             this.txtMaBan6.TabIndex = 2;
@@ -164,9 +166,9 @@
             // txtMaBan4
             // 
             this.txtMaBan4.AutoSize = true;
-            this.txtMaBan4.BackColor = System.Drawing.Color.White;
+            this.txtMaBan4.BackColor = System.Drawing.Color.Transparent;
             this.txtMaBan4.ForeColor = System.Drawing.Color.Black;
-            this.txtMaBan4.Location = new System.Drawing.Point(61, 134);
+            this.txtMaBan4.Location = new System.Drawing.Point(78, 134);
             this.txtMaBan4.Name = "txtMaBan4";
             this.txtMaBan4.Size = new System.Drawing.Size(102, 19);
             this.txtMaBan4.TabIndex = 2;
@@ -193,7 +195,8 @@
             // txtMaBan2
             // 
             this.txtMaBan2.AutoSize = true;
-            this.txtMaBan2.Location = new System.Drawing.Point(56, 134);
+            this.txtMaBan2.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaBan2.Location = new System.Drawing.Point(79, 134);
             this.txtMaBan2.Name = "txtMaBan2";
             this.txtMaBan2.Size = new System.Drawing.Size(102, 19);
             this.txtMaBan2.TabIndex = 2;
@@ -220,7 +223,8 @@
             // txtMaBan3
             // 
             this.txtMaBan3.AutoSize = true;
-            this.txtMaBan3.Location = new System.Drawing.Point(61, 129);
+            this.txtMaBan3.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaBan3.Location = new System.Drawing.Point(78, 129);
             this.txtMaBan3.Name = "txtMaBan3";
             this.txtMaBan3.Size = new System.Drawing.Size(102, 19);
             this.txtMaBan3.TabIndex = 2;
@@ -248,7 +252,9 @@
             // txtMaBan1
             // 
             this.txtMaBan1.AutoSize = true;
-            this.txtMaBan1.Location = new System.Drawing.Point(56, 129);
+            this.txtMaBan1.BackColor = System.Drawing.Color.Transparent;
+            this.txtMaBan1.ForeColor = System.Drawing.Color.White;
+            this.txtMaBan1.Location = new System.Drawing.Point(79, 129);
             this.txtMaBan1.Name = "txtMaBan1";
             this.txtMaBan1.Size = new System.Drawing.Size(102, 19);
             this.txtMaBan1.TabIndex = 2;
@@ -271,6 +277,7 @@
             this.Location = new System.Drawing.Point(192, 93);
             this.Name = "FormQuanLyBan";
             this.Load += new System.EventHandler(this.FormQuanLyBan_Load);
+            this.Enter += new System.EventHandler(this.FormQuanLyBan_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBan)).EndInit();
             this.ban5.ResumeLayout(false);
             this.ban5.PerformLayout();

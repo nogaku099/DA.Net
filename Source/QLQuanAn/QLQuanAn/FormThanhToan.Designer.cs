@@ -76,6 +76,7 @@
             this.txtTienKhachDua.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtTienKhachDua.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.txtTienKhachDua.TabStopChanged += new System.EventHandler(this.txtTienKhachDua_TabStopChanged);
+            this.txtTienKhachDua.TextChanged += new System.EventHandler(this.txtTienKhachDua_TextChanged);
             this.txtTienKhachDua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienKhachDua_KeyPress);
             // 
             // metroLabel2
@@ -115,9 +116,8 @@
             this.lblTienTraLai.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblTienTraLai.Location = new System.Drawing.Point(251, 160);
             this.lblTienTraLai.Name = "lblTienTraLai";
-            this.lblTienTraLai.Size = new System.Drawing.Size(83, 19);
+            this.lblTienTraLai.Size = new System.Drawing.Size(0, 0);
             this.lblTienTraLai.TabIndex = 4;
-            this.lblTienTraLai.Text = "metroLabel3";
             // 
             // FormThanhToan
             // 

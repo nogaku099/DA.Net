@@ -40,7 +40,7 @@ namespace QLQuanAn
         String maNV = "";
 
         int soDongLoad = 14;
-       
+        
         DataTable dataChon = new DataTable();
         HoaDon hoaDon= new HoaDon();
 
@@ -71,7 +71,7 @@ namespace QLQuanAn
             else
             {
                 btnThanhToan.Enabled = true;
-                btnLuu.Text = "Cập nhật";
+                
             }
         }
         public void customListViewSanPham()
@@ -147,7 +147,10 @@ namespace QLQuanAn
             
             return dt;
         }
-        
+        public void layDSCTHDMoiSauKhiThayDoi()
+        {
+            dsChiTietHoaDon = bus_ChiTietHoaDon.layDSChiTietHoaDonTheoMaHoaDon(hoaDon.MaHoaDon);
+        }
         public void customGridDanhSachMonDaChon()
         {
           
@@ -188,25 +191,27 @@ namespace QLQuanAn
         {
             lblMaBanDangPhucVu.Text = "Bàn " + maBanDangChon;
             String temp = maBanDangChon;
-            lstBan = bus_Ban.layDSBan();
-            foreach (Ban ban in lstBan)
-            {
-                lstMaBan.Add(ban.MaBan);
-            }
-            listBan.DataSource = lstMaBan;
-
-            listBan.SelectedIndex = listBan.FindString(temp);
-
+            banDangChon = bus_Ban.layBanTheoMaBan(maBanDangChon);
             chuyenTrangThaiNutThanhToan(trangThaiBanDangChon);
-            if (trangThaiBanDangChon == "Free")
+            if (banDangChon.TrangThai == "Free")
             {
                 HoaDon hoaDonTemp = new HoaDon(bus_HoaDon.taoMaHDMoi(), DateTime.Now, 0, maNV, maBanDangChon, "Chưa thanh toán");
                 hoaDon = hoaDonTemp;
+                bus_HoaDon.themHoaDon(hoaDon);
+                banDangChon.TrangThai = "Busy";
+                bus_Ban.capNhatTrangThai(banDangChon);
             }
+            else
+            {
+                hoaDon = bus_HoaDon.layHDTheoMaBanVaTrangThaiBusy(maBanDangChon);
+                dsChiTietHoaDon = bus_ChiTietHoaDon.layDSChiTietHoaDonTheoMaHoaDon(hoaDon.MaHoaDon);
+            }
+            
             customListViewSanPham();
             phanTrangSanPham();
             processGridDSDaChon();
             banDangChon = bus_Ban.layBanTheoMaBan(maBanDangChon);
+            txtTongTien.Text = tongTienHoaDon(dsChiTietHoaDon).ToString();
         }
         public void processGridDSDaChon()
         {
@@ -264,6 +269,7 @@ namespace QLQuanAn
             }
         }
 
+        
         private void lstViewSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
             bool daChon = false;
@@ -271,8 +277,6 @@ namespace QLQuanAn
             //Truong hop ban moi chua phuc vu == tao hoa don và chi tiết hoá đơn mới
             if (this.trangThaiBanDangChon == "Free")
             {
-                //ChiTietHoaDon cthd = new ChiTietHoaDon();
-                //hoaDon = new HoaDon(bus_HoaDon.taoMaHDMoi(), DateTime.Now,0,maNV, maBanDangChon, "Chưa thanh toán");
                 //Tiến hành lấy giá trị mỗi dòng trên listview để add vào gridview gridListMonDaChon
                 if (lsv.SelectedItems.Count > 0)
                 {
@@ -302,6 +306,11 @@ namespace QLQuanAn
                                     {
                                         cthd.SoLuong = cthd.SoLuong + 1;
                                         cthd.ThanhTien = sanPham.GiaSanPham * cthd.SoLuong;
+                                        bus_ChiTietHoaDon.chinhSuaSoLuongChiTietHoaDon(cthd);
+                                        layDSCTHDMoiSauKhiThayDoi();
+                                        capNhatHoaDonDangXuLy();
+                                        btnThanhToan.Enabled = true;
+                                        
                                     }
                                 }
                             }
@@ -315,8 +324,10 @@ namespace QLQuanAn
                             //dsSanPhamChon.Add(sanPham);
                             //float giaSanPham = sanPham.getGiaSanPham();
                             ChiTietHoaDon cthd = new ChiTietHoaDon(bus_ChiTietHoaDon.taoMaCTHDMoi()+dsChiTietHoaDon.Count.ToString(),hoaDon.MaHoaDon,sanPham.MaSanPham,1,giaSanPham);
-                            dsChiTietHoaDon.Add(cthd);
-
+                            bus_ChiTietHoaDon.themCTHoaDon(cthd);
+                            layDSCTHDMoiSauKhiThayDoi();
+                            capNhatHoaDonDangXuLy();
+                            btnThanhToan.Enabled = true;
                         }
                         //MessageBox.Show(sanPham.MaSanPham +" "+sanPham.TenSanPham+" "+sanPham.LoaiSanPham+" "+sanPham.DuongDan+" "+sanPham.GiaSanPham);
                         //MessageBox.Show(item.SubItems[3].Text);
@@ -325,46 +336,107 @@ namespace QLQuanAn
                 }
 
             }
-            else
+            else //Truong hop load ban dang phuc vu
             {
+                if (lsv.SelectedItems.Count > 0)
+                {
+                    foreach (ListViewItem item in lsv.SelectedItems)
+                    {
+                        SanPham sanPham = new SanPham(item.SubItems[3].Text, item.Text, item.SubItems[1].Text, "", float.Parse(item.SubItems[2].Text));
+                        float giaSanPham = sanPham.getGiaSanPham();
+                        foreach (ChiTietHoaDon cthd in dsChiTietHoaDon)
+                        {
+                            //Truong hop chon lai sp da chon
+                            if (cthd.MaSanPham == sanPham.MaSanPham)
+                            {
+                                daChon = true;
+                            }
 
+                        }
+                        if (daChon)
+                        {
+                            //MessageBox.Show("SP nay da chon roi");
+                            DialogResult ketQuaChon = MetroMessageBox.Show(Owner, "Món này đã chọn rồi. Bạn có muốn tăng số lượng của món này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                            //Đồng ý thay đổi
+                            if (ketQuaChon == DialogResult.OK)
+                            {
+                                foreach (ChiTietHoaDon cthd in dsChiTietHoaDon)
+                                {
+                                    if (cthd.MaSanPham == sanPham.MaSanPham)
+                                    {
+                                        cthd.SoLuong = cthd.SoLuong + 1;
+                                        cthd.ThanhTien = sanPham.GiaSanPham * cthd.SoLuong;
+                                        bus_ChiTietHoaDon.chinhSuaSoLuongChiTietHoaDon(cthd);
+                                        layDSCTHDMoiSauKhiThayDoi();
+                                        capNhatHoaDonDangXuLy();
+                                    }
+                                }
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                        else //Trường hợp sản phẩm chưa được chọn sẽ được add vào dsChiTietHoaDon, gridListMonDaChon chính là danh sách các chi tiết hoá đon dc tạo từ dsChiTietHoaDon
+                        {
+                            //dsSanPhamChon.Add(sanPham);
+                            //float giaSanPham = sanPham.getGiaSanPham();
+                            ChiTietHoaDon cthd = new ChiTietHoaDon(bus_ChiTietHoaDon.taoMaCTHDMoi() + dsChiTietHoaDon.Count.ToString(), hoaDon.MaHoaDon, sanPham.MaSanPham, 1, giaSanPham);
+                            bus_ChiTietHoaDon.themCTHoaDon(cthd);
+                            layDSCTHDMoiSauKhiThayDoi();
+                            capNhatHoaDonDangXuLy();
+
+
+                        }
+                        //MessageBox.Show(sanPham.MaSanPham +" "+sanPham.TenSanPham+" "+sanPham.LoaiSanPham+" "+sanPham.DuongDan+" "+sanPham.GiaSanPham);
+                        //MessageBox.Show(item.SubItems[3].Text);
+                    }
+
+                }
             }
             processGridDSDaChon();
-        }
-
-        private void btnTest_Click(object sender, EventArgs e)
-        {
-            foreach(ChiTietHoaDon sp in dsChiTietHoaDon)
-            {
-                MessageBox.Show(sp.MaChiTietHoaDon);
-            }
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            foreach (ChiTietHoaDon sp in dsChiTietHoaDon)
-            {
-                MessageBox.Show(sp.MaChiTietHoaDon);
-            }
+            txtTongTien.Text = tongTienHoaDon(dsChiTietHoaDon).ToString();
         }
 
         
+        
+        public int layViTriHienTaiCuaMonTrongDSCTHD(List<ChiTietHoaDon> lstChiTietHoaDon, String maMon)
+        {
+            int viTri = 0;
+            foreach(ChiTietHoaDon cthd in lstChiTietHoaDon)
+            {
+                if(cthd.MaSanPham == maMon)
+                {
+                    viTri = lstChiTietHoaDon.IndexOf(cthd);
+                }
+            }
+            return viTri;
+        }
         //Xu ly tang giam xoa mon tren gridListMonDaChon
         private void gridListMonDaChon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex >= 0)
             {
-                DataGridViewRow row = this.gridListMonDaChon.Rows[e.RowIndex];
+                
                 String maMonDangChinhSua = "";
                 maMonDangChinhSua = gridListMonDaChon.CurrentRow.Cells[3].Value.ToString();
                 int soLuong = int.Parse(gridListMonDaChon.CurrentRow.Cells[6].Value.ToString());
+                int viTriCapNhatSoLuong = 0;
+                float giaSanPham = bus_SanPham.layGiaSPTheoMaSP(maMonDangChinhSua);
                 if (e.ColumnIndex == 5)
                 {
                    
                     soLuong = soLuong + 1;
                     gridListMonDaChon.CurrentRow.Cells[6].Value = soLuong.ToString();
-                    gridListMonDaChon.CurrentRow.Cells[8].Value = soLuong * bus_SanPham.layGiaSPTheoMaSP(maMonDangChinhSua);
-                    MessageBox.Show("Tang");
+                    gridListMonDaChon.CurrentRow.Cells[8].Value = soLuong * giaSanPham;
+                    viTriCapNhatSoLuong = layViTriHienTaiCuaMonTrongDSCTHD(dsChiTietHoaDon, maMonDangChinhSua);
+                    dsChiTietHoaDon[viTriCapNhatSoLuong].SoLuong = soLuong;
+                    dsChiTietHoaDon[viTriCapNhatSoLuong].ThanhTien = soLuong * giaSanPham;
+                    processGridDSDaChon();
+                    bus_ChiTietHoaDon.chinhSuaSoLuongChiTietHoaDon(dsChiTietHoaDon[viTriCapNhatSoLuong]);
+                    layDSCTHDMoiSauKhiThayDoi();
+                    capNhatHoaDonDangXuLy();
+                    //MessageBox.Show(txtTongTien.Text = tongTienHoaDon(dsChiTietHoaDon).ToString());
                 }
                 if(e.ColumnIndex == 7)
                 {
@@ -373,7 +445,14 @@ namespace QLQuanAn
                     {
                         gridListMonDaChon.CurrentRow.Cells[6].Value = soLuong.ToString();
                         gridListMonDaChon.CurrentRow.Cells[8].Value = soLuong * bus_SanPham.layGiaSPTheoMaSP(maMonDangChinhSua);
-                       
+                        viTriCapNhatSoLuong = layViTriHienTaiCuaMonTrongDSCTHD(dsChiTietHoaDon, maMonDangChinhSua);
+                        dsChiTietHoaDon[viTriCapNhatSoLuong].SoLuong = soLuong;
+                        dsChiTietHoaDon[viTriCapNhatSoLuong].ThanhTien = soLuong * giaSanPham;
+                        processGridDSDaChon();
+                        txtTongTien.Text = tongTienHoaDon(dsChiTietHoaDon).ToString();
+                        bus_ChiTietHoaDon.chinhSuaSoLuongChiTietHoaDon(dsChiTietHoaDon[viTriCapNhatSoLuong]);
+                        layDSCTHDMoiSauKhiThayDoi();
+                        capNhatHoaDonDangXuLy();
                     }
                     else
                     {
@@ -390,7 +469,11 @@ namespace QLQuanAn
                                 }
 
                             }
-                            dsChiTietHoaDon.RemoveAt(viTriXoa);
+                            bus_ChiTietHoaDon.xoaCTHD(dsChiTietHoaDon[viTriXoa]);
+                            layDSCTHDMoiSauKhiThayDoi();
+
+                            txtTongTien.Text = tongTienHoaDon(dsChiTietHoaDon).ToString();
+                            capNhatHoaDonDangXuLy();
                             processGridDSDaChon();
                         }
                     }
@@ -411,43 +494,69 @@ namespace QLQuanAn
                             }
 
                         }
-                        dsChiTietHoaDon.RemoveAt(viTriXoa);
+                        bus_ChiTietHoaDon.xoaCTHD(dsChiTietHoaDon[viTriXoa]);
+                        layDSCTHDMoiSauKhiThayDoi();
+                        txtTongTien.Text = tongTienHoaDon(dsChiTietHoaDon).ToString();
+                        capNhatHoaDonDangXuLy();
                         processGridDSDaChon();
                     }
 
                 }
+                txtTongTien.Text = tongTienHoaDon(dsChiTietHoaDon).ToString();
+                capNhatHoaDonDangXuLy();
+                //processGridDSDaChon();
             }
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        public float tongTienHoaDon(List<ChiTietHoaDon> lstChiTietHoaDon)
         {
             float tongTien = 0;
-            //Trường hợp là bàn trống đã thêm xong món và lưu xuống DB
-            if (btnLuu.Text == "Lưu")
+            foreach(ChiTietHoaDon cthd in lstChiTietHoaDon)
             {
-                //Them hoa don va chi tiet hoa don vao DB
-                
-                foreach (ChiTietHoaDon cthd in dsChiTietHoaDon)
-                {
-                    tongTien+=float.Parse(cthd.ThanhTien.ToString());
-                }
-                hoaDon.TongTien = tongTien;
-                bus_HoaDon.themHoaDon(hoaDon);
-                bus_ChiTietHoaDon.themDSChiTietHoaDon(dsChiTietHoaDon);
-                banDangChon.TrangThai = "Busy";
-                bus_Ban.capNhatTrangThai(banDangChon);
-                MetroMessageBox.Show(Owner, "Đã thêm hoá đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnLuu.Text = "Cập nhật";
+                tongTien += float.Parse(cthd.ThanhTien.ToString());
             }
-            else if (btnLuu.Text=="Cập nhật")
-            {
-                MessageBox.Show("Wait");
-            }
+            return tongTien;
         }
+        int daThem = 0;
+        public void capNhatHoaDonDangXuLy()
+        {
+            hoaDon.TongTien = tongTienHoaDon(dsChiTietHoaDon);
+            bus_HoaDon.capNhatTongTienHoaDonTheoMaHoaDon(hoaDon.MaHoaDon, float.Parse(hoaDon.TongTien.ToString()));
+            banDangChon.TrangThai = "Busy";
+            bus_Ban.capNhatTrangThai(banDangChon);
+        }
+        
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            FormThanhToan formThanhToan = new FormThanhToan(float.Parse(hoaDon.TongTien.ToString()),banDangChon.MaBan,hoaDon.MaHoaDon);
+            formThanhToan.Show();
+        }
 
+        private void FormDatMon_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+       
+
+        private void FormDatMon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(daThem == 0)
+            {
+
+            }
+            DialogResult ketQuaChon = MetroMessageBox.Show(Owner, "Bạn sẽ được chuyển về giao diện quản lý bàn", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(ketQuaChon == DialogResult.OK)
+            {
+                FormQuanLyBan form = new FormQuanLyBan(maNV);
+                form.Show();
+                
+            }
+            else
+            {
+
+            }
         }
     }
 }

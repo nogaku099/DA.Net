@@ -72,7 +72,23 @@ namespace DAL
                 return null;
             }
         }
+        public bool capNhatTongTienHoaDonTheoMaHoaDon(String maHD, float tongTien)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.HoaDons
+                              where item.MaHoaDon == maHD
+                              select item).FirstOrDefault();
+                ketQua.TongTien = tongTien;
+                ketNoi.SubmitChanges();
+                return true;
 
+            }
+            catch
+            {
+                return false;
+            }
+        }
         public bool themHoaDon(HoaDon item)
         {
             try
@@ -86,5 +102,29 @@ namespace DAL
                 return false;
             }
         }
+
+        public HoaDon layHDTheoMaBanVaTrangThaiBusy(String maBan)
+        {
+            try
+            {
+                var ketQua = (from item in ketNoi.HoaDons
+                              where item.MaBan == maBan && item.TrangThaiHoaDon == "Chưa thanh toán"
+                              select item).FirstOrDefault();
+                return ketQua;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public List<HoaDon> layDanhSachHoaDon(int soDongBoQua, int soDongCanLay)
+        {
+            var ketQua = (from item in ketNoi.HoaDons.Skip(soDongBoQua).Take(soDongCanLay)
+                          select item).ToList();
+
+            return ketQua;
+        }
+
     }
 }

@@ -24,6 +24,7 @@ namespace QLQuanAn
         BUS_HoaDon bus_HoaDon = new BUS_HoaDon();
         DAL_HoaDon dal_HoaDon = new DAL_HoaDon();
         #endregion
+        
         public FormThanhToan()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace QLQuanAn
 
         private void FormThanhToan_Load(object sender, EventArgs e)
         {
-
+            lblTongTien.Text = "Tổng tiền: " + this.tongTien;
         }
 
         private void txtTienKhachDua_KeyPress(object sender, KeyPressEventArgs e)
@@ -80,7 +81,9 @@ namespace QLQuanAn
                 if (ketQuaChonOK == DialogResult.OK)
                 {
                     this.Dispose();
-                    FormQuanLyBan form = new FormQuanLyBan();
+                    dongFormDatMon();
+                    dongFormQuanLyBan();
+                    FormQuanLyBan form = new FormQuanLyBan(hoaDonDangThanhToan.MaNhanVien);
                     form.Show();
                 }
                 else
@@ -92,6 +95,45 @@ namespace QLQuanAn
             {
 
             }
+        }
+        public void dongFormDatMon()
+        {
+            for (int index = Application.OpenForms.Count - 1; index >= 0; index--)
+            {
+                if (Application.OpenForms[index].Name == "FormDatMon")
+                {
+                    Application.OpenForms[index].Close();
+                }
+            }
+        }
+
+        public void dongFormQuanLyBan()
+        {
+            for (int index = Application.OpenForms.Count - 1; index >= 0; index--)
+            {
+                if (Application.OpenForms[index].Name == "FormQuanLyBan")
+                {
+                    Application.OpenForms[index].Close();
+                }
+            }
+        }
+        private void txtTienKhachDua_TextChanged(object sender, EventArgs e)
+        {
+            float tienTraLai = 0;
+
+            float tienKhachDua = float.Parse(txtTienKhachDua.Text);//float.parseFloat(txtTienKhachDua.Text);
+            if(tienKhachDua < tongTien)
+            {
+
+            }
+            else
+            {
+                tienTraLai = -(tongTien - tienKhachDua);
+                
+            }
+            
+            
+            lblTienTraLai.Text = tienTraLai.ToString();
         }
     }
 }

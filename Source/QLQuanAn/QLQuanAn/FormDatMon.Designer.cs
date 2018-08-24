@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroPanel56 = new MetroFramework.Controls.MetroPanel();
             this.lstViewSanPham = new MetroFramework.Controls.MetroListView();
             this.colTenSanPham = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,7 +40,6 @@
             this.lblHienThiSoTrang = new MetroFramework.Controls.MetroLabel();
             this.txtTongTien = new MetroFramework.Controls.MetroLabel();
             this.btnThanhToan = new MetroFramework.Controls.MetroButton();
-            this.btnLuu = new MetroFramework.Controls.MetroButton();
             this.metroLabel40 = new MetroFramework.Controls.MetroLabel();
             this.gridListMonDaChon = new MetroFramework.Controls.MetroGrid();
             this.metroLabel38 = new MetroFramework.Controls.MetroLabel();
@@ -62,7 +61,6 @@
             this.metroPanel56.Controls.Add(this.lblHienThiSoTrang);
             this.metroPanel56.Controls.Add(this.txtTongTien);
             this.metroPanel56.Controls.Add(this.btnThanhToan);
-            this.metroPanel56.Controls.Add(this.btnLuu);
             this.metroPanel56.Controls.Add(this.metroLabel40);
             this.metroPanel56.Controls.Add(this.gridListMonDaChon);
             this.metroPanel56.Controls.Add(this.metroLabel38);
@@ -144,26 +142,14 @@
             // btnThanhToan
             // 
             this.btnThanhToan.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnThanhToan.Location = new System.Drawing.Point(941, 554);
+            this.btnThanhToan.Location = new System.Drawing.Point(697, 529);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(175, 54);
+            this.btnThanhToan.Size = new System.Drawing.Size(362, 76);
             this.btnThanhToan.TabIndex = 15;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseCustomBackColor = true;
             this.btnThanhToan.UseSelectable = true;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnLuu.Location = new System.Drawing.Point(697, 554);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(168, 54);
-            this.btnLuu.TabIndex = 15;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseCustomBackColor = true;
-            this.btnLuu.UseSelectable = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // metroLabel40
             // 
@@ -184,37 +170,37 @@
             this.gridListMonDaChon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gridListMonDaChon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.gridListMonDaChon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListMonDaChon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListMonDaChon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridListMonDaChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridListMonDaChon.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridListMonDaChon.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridListMonDaChon.EnableHeadersVisualStyles = false;
             this.gridListMonDaChon.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridListMonDaChon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gridListMonDaChon.Location = new System.Drawing.Point(495, 56);
             this.gridListMonDaChon.Name = "gridListMonDaChon";
             this.gridListMonDaChon.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridListMonDaChon.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridListMonDaChon.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridListMonDaChon.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridListMonDaChon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridListMonDaChon.Size = new System.Drawing.Size(729, 387);
@@ -310,6 +296,7 @@
             this.metroLabel36.Size = new System.Drawing.Size(80, 19);
             this.metroLabel36.TabIndex = 3;
             this.metroLabel36.Text = "Chọn bàn: ";
+            this.metroLabel36.Visible = false;
             // 
             // listBan
             // 
@@ -320,6 +307,7 @@
             this.listBan.Size = new System.Drawing.Size(121, 29);
             this.listBan.TabIndex = 2;
             this.listBan.UseSelectable = true;
+            this.listBan.Visible = false;
             this.listBan.SelectedIndexChanged += new System.EventHandler(this.listBan_SelectedIndexChanged);
             // 
             // FormDatMon
@@ -329,6 +317,8 @@
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.metroPanel56);
             this.Name = "FormDatMon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDatMon_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDatMon_FormClosed);
             this.Load += new System.EventHandler(this.FormDatMon_Load);
             this.metroPanel56.ResumeLayout(false);
             this.metroPanel56.PerformLayout();
@@ -342,7 +332,6 @@
 
         private MetroFramework.Controls.MetroPanel metroPanel56;
         private MetroFramework.Controls.MetroButton btnThanhToan;
-        private MetroFramework.Controls.MetroButton btnLuu;
         private MetroFramework.Controls.MetroLabel metroLabel40;
         private MetroFramework.Controls.MetroGrid gridListMonDaChon;
         private MetroFramework.Controls.MetroLabel metroLabel38;
