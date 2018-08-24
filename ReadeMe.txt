@@ -1,1 +1,5 @@
-﻿Phan Tuấn Trọng
+﻿Phần mềm quản lý quán ăn
+Giảng viên hướng dẫn : Mai Văn Mạnh
+Người thực hiện : Phan Tuấn Trọng mssv 51203152
+Phần mềm được viết trên .net 4 bằng Visual studio 2017, Microsoft SQL 2017
+Các phần mềm khác sử dụng trong bài bao gồm : StarUML
