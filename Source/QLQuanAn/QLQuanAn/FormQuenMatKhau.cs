@@ -49,6 +49,8 @@ namespace QLQuanAn
                     {
                         //Tien hanh thay doi mat khau
                         bus_TaiKhoan.thayDoiMatKhauBangMK2(taiKhoan, matKhau2, matKhauMoi);
+                        MetroMessageBox.Show(Owner,"Đã thay đổi mật khẩu thành công","Thông báo",
+                            MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                     else
                     {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBQLQuanAn" Class="KetNoiDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-PJ16GUC\SQLEXPRESS;Initial Catalog=DBQLQuanAn;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DBQLQuanAnConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-N6BS5IF\SQLEXPRESS;Initial Catalog=DBQLQuanAn;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="DBQLQuanAnConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Ban" Member="Bans">
     <Type Name="Ban">
       <Column Name="MaBan" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
