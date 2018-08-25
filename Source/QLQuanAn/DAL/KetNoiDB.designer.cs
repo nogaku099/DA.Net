@@ -51,7 +51,7 @@ namespace DAL
     #endregion
 		
 		public KetNoiDBDataContext() : 
-				base(global::DAL.Properties.Settings.Default.DBQLQuanAnConnectionString, mappingSource)
+				base(global::DAL.Properties.Settings.Default.DBQLQuanAnConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
